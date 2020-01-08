@@ -1,0 +1,40 @@
+<div>
+    <h1>
+        WhatToDo?!
+    </h1>
+    <div (click)='showSignIn()'>Sign In</div>
+    <div *ngIf='loginState === "isSignIn"'>
+        <label>
+
+            Name
+            <input type="text">
+        </label>
+        <label>
+            password
+            <input type="password">
+        </label>
+        <label>
+            confirm password
+            <input type="password">
+        </label>
+        <input type="submit">
+    </div>
+    <div (click)='showSignUp()'>Sign UP</div>
+    <div *ngIf='loginState === "isSignUp"'>
+            <label>
+
+                    Name
+                    <input type="text">
+                </label>
+                <label>
+                    password
+                    <input type="password">
+                </label>
+                <input type="submit">
+    </div>
+    <div (click)='showWOLogin()'>Continue w/o login</div>
+    <div *ngIf='loginState === "isWOLogin"'>
+        You could save your lists only on your current device
+        <input type="submit" value="Continue">
+    </div>
+</div>
