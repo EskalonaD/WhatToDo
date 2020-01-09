@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 enum loginState {
-  isSignIn = 'isSignIn',
-  isSignUp = 'isSignUp',
-  isWOLogin = 'isWOLogin',
+  SignIn = 'SignIn',
+  SignUp = 'SignUp',
+  WOLogin = 'WOLogin',
 }
 
 @Component({
@@ -14,19 +14,19 @@ enum loginState {
 export class LoginComponent implements OnInit {
 
   constructor() { }
-  protected loginState: loginState;
+  protected loginStatus: loginState;
 
   showSignIn() {
-    console.log(this.loginState)
+    // console.log(this.loginState)
     console.log(loginState)
-    this.loginState = loginState.isSignIn
-    console.log(this.loginState)
+    this.loginStatus = loginState.SignIn
+    // console.log(this.loginState)
   };
   showSignUp() {
-    this.loginState = loginState.isSignUp
+    this.loginStatus = loginState.SignUp
   };
   showWOLogin() {
-    this.loginState = loginState.isWOLogin
+    this.loginStatus = loginState.WOLogin
   };
 
   ngOnInit() {

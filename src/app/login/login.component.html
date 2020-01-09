@@ -1,9 +1,9 @@
-<div>
+<div [ngSwitch]="loginStatus">
     <h1>
         WhatToDo?!
     </h1>
     <div (click)='showSignIn()'>Sign In</div>
-    <div *ngIf='loginState === "isSignIn"'>
+    <div *ngSwitchCase='"SignIn"'>
         <label>
 
             Name
@@ -17,10 +17,10 @@
             confirm password
             <input type="password">
         </label>
-        <input type="submit">
+        <input type="submit" [routerLink]='["/main"]'>
     </div>
     <div (click)='showSignUp()'>Sign UP</div>
-    <div *ngIf='loginState === "isSignUp"'>
+    <div *ngSwitchCase='"SignUp"'>
             <label>
 
                     Name
@@ -30,11 +30,11 @@
                     password
                     <input type="password">
                 </label>
-                <input type="submit">
+                <input type="submit" [routerLink]='["/main"]'>
     </div>
     <div (click)='showWOLogin()'>Continue w/o login</div>
-    <div *ngIf='loginState === "isWOLogin"'>
+    <div *ngSwitchCase='"WOLogin"'>
         You could save your lists only on your current device
-        <input type="submit" value="Continue">
+        <input type="submit" value="Continue" [routerLink]='["/main"]'>
     </div>
 </div>
