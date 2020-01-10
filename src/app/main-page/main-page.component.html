@@ -4,6 +4,6 @@
 <div *ngIf='!isTaskShown; else tasks' (click)='showTask()'>What To Do?!
 </div>
         <ng-template #tasks>
-    tasks dummy;
+    <app-tasks></app-tasks>
     </ng-template>
 <a [routerLink]="['/main/manage-tasks']">Manage tasks</a>
