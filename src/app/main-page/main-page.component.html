@@ -1,7 +1,7 @@
 <p>main-page works!</p>
 <app-header></app-header>
 
-<div *ngIf='!isTaskShown; else tasks' (click)='showTask()'>What To Do?!
+<div *ngIf='!isTaskShown; else tasks' (click)='showTask()' class='button'>What To Do?!
 </div>
         <ng-template #tasks>
     <app-tasks></app-tasks>
