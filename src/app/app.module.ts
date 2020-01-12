@@ -10,6 +10,8 @@ import { TasksComponent } from './tasks/tasks.component';
 import { ManageTasksComponent } from './manage-tasks/manage-tasks.component';
 import { NavigationButtonsComponent } from './navigation-buttons/navigation-buttons.component';
 
+import {NewTaskModule } from './new-task/new-task.module'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { NavigationButtonsComponent } from './navigation-buttons/navigation-butt
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NewTaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
