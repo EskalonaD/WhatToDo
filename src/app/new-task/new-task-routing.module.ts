@@ -4,7 +4,8 @@ import { OrdinaryTasksComponent } from './ordinary-tasks/ordinary-tasks.componen
 
 
 const routes: Routes = [
-  {path: 'manage-tasks/ordinary-tasks', component: OrdinaryTasksComponent}
+  // {path: 'manage-tasks/ordinary-tasks', component: OrdinaryTasksComponent}
+  {path: 'ordinary-tasks', component: OrdinaryTasksComponent}
 ];
 
 @NgModule({
