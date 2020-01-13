@@ -11,11 +11,11 @@ export class NavigationButtonsComponent implements OnInit {
 
   constructor(private location: Location, private router: Router) { }
 
-  goToMainPage() {
+  goToMainPage(): void {
     this.router.navigate(['/main']);
   }
 
-  goBack() {
+  goBack(): void {
     this.location.back();
   }
   ngOnInit() {

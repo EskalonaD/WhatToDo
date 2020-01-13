@@ -12,7 +12,7 @@ export class TasksComponent implements OnInit {
 
   constructor() { }
 
-  data = (<any>data).default;
+  data: string[] = (<{default: string[]}><unknown>data).default;
   // data = data;
   // data1 = data[0];
   // // data1 = data.default;

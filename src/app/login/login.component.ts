@@ -16,18 +16,18 @@ export class LoginComponent implements OnInit {
   constructor() { }
   protected loginStatus: loginState;
 
-  showSignIn() {
+  showSignIn(): void {
     // console.log(this.loginState)
     console.log(loginState);
     this.loginStatus = loginState.SignIn;
     // console.log(this.loginState)
   }
 
-  showSignUp() {
+  showSignUp(): void {
     this.loginStatus = loginState.SignUp;
   }
   
-  showWOLogin() {
+  showWOLogin(): void {
     this.loginStatus = loginState.WOLogin;
   }
 
