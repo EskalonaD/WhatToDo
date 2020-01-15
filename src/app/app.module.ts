@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { HeaderComponent } from './header/header.component';
-import { TasksComponent } from './tasks/tasks.component';
 import { ManageTasksComponent } from './manage-tasks/manage-tasks.component';
 // import { NavigationButtonsComponent } from './navigation-buttons/navigation-buttons.component';
 
 import {NewTaskModule } from './new-task/new-task.module';
-import {NavigationButtonsModule} from './navigation-buttons/navigation-buttons.module'
+import {NavigationButtonsModule} from './navigation-buttons/navigation-buttons.module';
+import {TasksViewModule } from './tasks-view/tasks-view.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ import {NavigationButtonsModule} from './navigation-buttons/navigation-buttons.m
     LoginComponent,
     MainPageComponent,
     HeaderComponent,
-    TasksComponent,
     ManageTasksComponent,
     // NavigationButtonsComponent
   ],
@@ -27,7 +26,8 @@ import {NavigationButtonsModule} from './navigation-buttons/navigation-buttons.m
     BrowserModule,
     AppRoutingModule,
     NewTaskModule,
-    NavigationButtonsModule
+    NavigationButtonsModule,
+    TasksViewModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

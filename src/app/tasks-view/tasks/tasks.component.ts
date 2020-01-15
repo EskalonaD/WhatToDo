@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import * as data from "../mock-data/mock-tasks.json";  //remove resolveJsonMofule flag from  tsconfig.json
+import * as data from "../../mock-data/mock-tasks.json";  //remove resolveJsonMofule flag from  tsconfig.json
 // import * as test from "../mock-data/test.json";  //remove resolveJsonMofule flag from  tsconfig.json
 
 @Component({
@@ -12,7 +12,8 @@ export class TasksComponent implements OnInit {
 
   constructor() { }
 
-  data: string[] = (<{default: string[]}><unknown>data).default;
+  // data: string[] = (<{default: string[]}><unknown>data).default;
+  data: string[] = (<unknown>data as { default: string[] }).default;
   // data = data;
   // data1 = data[0];
   // // data1 = data.default;

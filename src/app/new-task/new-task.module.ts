@@ -7,6 +7,7 @@ import { NewTaskRoutingModule } from './new-task-routing.module';
 // import {NavigationButtonsComponent} from '../navigation-buttons/navigation-buttons.component'
 
 import {NavigationButtonsModule} from '../navigation-buttons/navigation-buttons.module'
+import { TasksViewModule } from '../tasks-view/tasks-view.module';
 
 //change name to Ordinary tasks
 
@@ -22,7 +23,8 @@ import {NavigationButtonsModule} from '../navigation-buttons/navigation-buttons.
   imports: [
     CommonModule,
     NewTaskRoutingModule,
-    NavigationButtonsModule
+    NavigationButtonsModule,
+    TasksViewModule
   ]
 })
 export class NewTaskModule { }
