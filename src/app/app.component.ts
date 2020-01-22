@@ -9,8 +9,8 @@ import { StoreService } from './store.service';
 export class AppComponent {
   constructor(private store: StoreService){}
   title = 'WhatToDo';
+  
   get isLogin() {
-
     return this.store.isLogin
   }
 }

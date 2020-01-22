@@ -5,7 +5,6 @@
     <div (click)='showSignIn()'>Sign In</div>
     <div *ngSwitchCase='"SignIn"'>
         <label>
-
             Name
             <input type="text">
         </label>
@@ -21,16 +20,15 @@
     </div>
     <div (click)='showSignUp()'>Sign UP</div>
     <div *ngSwitchCase='"SignUp"'>
-            <label>
-
-                    Name
-                    <input type="text">
-                </label>
-                <label>
-                    password
-                    <input type="password">
-                </label>
-                <input type="submit" [routerLink]='["/main"]'>
+        <label>
+            Name
+            <input type="text">
+        </label>
+        <label>
+            password
+            <input type="password">
+        </label>
+        <input type="submit" [routerLink]='["/main"]'>
     </div>
     <div (click)='showWOLogin()'>Continue w/o login</div>
     <div *ngSwitchCase='"WOLogin"'>

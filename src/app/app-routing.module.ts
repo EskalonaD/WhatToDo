@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ManageTasksComponent } from './manage-tasks/manage-tasks.component';
-import { OrdinaryTasksComponent } from './new-task/ordinary-tasks/ordinary-tasks.component';
 
 
 const routes: Routes = [
@@ -11,18 +10,28 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'main', component: MainPageComponent },
   { 
-    path: 'main/manage-tasks',
-    component: ManageTasksComponent, 
-  },
+    path: 'main/manage-tasks', component: ManageTasksComponent },
   { 
     path: 'main/manage-tasks',
     children: [
-      { path: 'ordinary-tasks', component: OrdinaryTasksComponent}, //change name of conponent;
-      {path: 'future-tasks', component: OrdinaryTasksComponent },
-      {path: 'routine', component: OrdinaryTasksComponent },
-      { path: 'circular-tasks', component: OrdinaryTasksComponent },
-      { path: 'compaund-tasks', component: OrdinaryTasksComponent },
-      { path: 'someday-tasks', component: OrdinaryTasksComponent }
+      { path: 'ordinary-tasks',
+        loadChildren: './new-task/new-task.module#NewTaskModule'
+      },
+      { path: 'future-tasks',
+        loadChildren: () => import('./new-task/new-task.module').then(module => module.NewTaskModule)
+      },
+      { path: 'routine',
+        loadChildren: () => import('./new-task/new-task.module').then(module => module.NewTaskModule)
+      },
+      { path: 'circular-tasks',
+        loadChildren: () => import('./new-task/new-task.module').then(module => module.NewTaskModule)
+      },
+      { path: 'compaund-tasks',
+        loadChildren: () => import('./new-task/new-task.module').then(module => module.NewTaskModule)
+      },
+      { path: 'someday-tasks',
+        loadChildren: () => import('./new-task/new-task.module').then(module => module.NewTaskModule)
+      },
     ]
   },
 ];

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './navigation-buttons.component.html',
   styleUrls: ['./navigation-buttons.component.css']
 })
-export class NavigationButtonsComponent implements OnInit {
+export class NavigationButtonsComponent implements OnInit {    // move to AppComponent
 
   constructor(private location: Location, private router: Router) { }
 

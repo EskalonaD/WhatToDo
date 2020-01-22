@@ -16,9 +16,6 @@ export class MainPageComponent implements OnInit {
   showTask(): void {
     this.isTaskShown = true;
   }
-  ngOnInit() {
-    // console.log(data);
-    
-  }
+  ngOnInit() { }
 
 }
