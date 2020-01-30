@@ -14,13 +14,8 @@ export class OrdinaryTasksComponent implements OnInit, OnDestroy {
   constructor( private httpRequest: HttpRequestService) { }
 
     console = console;
-    
-    tasks$ = this.httpRequest.getTasks().pipe(
-      // take(1),
-      map(data => data.default
-        // .default
-        )
-    );
+
+    tasks$ = this.httpRequest.getTasks()
 
 
   

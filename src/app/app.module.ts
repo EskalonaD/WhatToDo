@@ -11,6 +11,7 @@ import { ManageTasksComponent } from './manage-tasks/manage-tasks.component';
 import {NavigationButtonsModule} from './navigation-buttons/navigation-buttons.module';
 import {TasksViewModule } from './tasks-view/tasks-view.module';
 import { StoreService } from './store.service';
+import { HttpRequestService } from './http-request.service'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { StoreService } from './store.service';
     TasksViewModule,
   ],
   providers: [
-    StoreService
+    StoreService,
+    HttpRequestService
   ],
   bootstrap: [AppComponent]
 })

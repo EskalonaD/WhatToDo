@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ManageTasksComponent } from './manage-tasks.component';
 
-describe('ManageTasksComponent', () => {
+xdescribe('ManageTasksComponent', () => {
   let component: ManageTasksComponent;
   let fixture: ComponentFixture<ManageTasksComponent>;
 
