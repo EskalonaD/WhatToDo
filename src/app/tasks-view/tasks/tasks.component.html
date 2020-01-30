@@ -1,4 +1,7 @@
 <p>1.some task<br>2.some task
 </p>
-    <div *ngFor='let task of data'>{{ task }}</div>
+    <div *ngIf='tasks$' (click)='console.log(tasks$)'>
+        hi
+        <div *ngFor='let task of tasks$ |async'>{{ task }}</div>
+    </div>
     <!-- <div [textContent]='data.default'></div> -->
