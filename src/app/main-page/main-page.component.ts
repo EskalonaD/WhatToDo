@@ -15,8 +15,8 @@ export class MainPageComponent implements OnInit {
   console = console;
   isTaskShown: boolean;
   tasks$ = this.httpRequest.getTasks().pipe(
-      // take(1),
-      map(data => data.default)
+    // map(data => data.default),
+    take(1),
     );
   
 

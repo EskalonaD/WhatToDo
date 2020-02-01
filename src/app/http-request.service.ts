@@ -12,7 +12,6 @@ export class HttpRequestService {
   constructor() { }
   data = data;
   getTasks(): Observable<any> {
-    console.log(data);
     return of(this.data).pipe(
       map(data => (data as any).default)
     )

@@ -13,19 +13,12 @@ export class OrdinaryTasksComponent implements OnInit, OnDestroy {
   
   constructor( private httpRequest: HttpRequestService) { }
 
-    console = console;
-
-    tasks$ = this.httpRequest.getTasks()
-
-
-  
-
+    tasks$ = this.httpRequest.getTasks().pipe(take(1))
 
   ngOnInit() {
   }
 
   ngOnDestroy() {
-    console.log(this.tasks$)
   }
 
 }
