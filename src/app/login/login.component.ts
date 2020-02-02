@@ -18,19 +18,24 @@ export class LoginComponent implements OnInit {
   protected loginStatus: loginState;
 
   showSignIn(): void {
-    console.log(loginState);
+    // console.log(loginState);
     this.loginStatus = loginState.SignIn;
-    this.store.isLogin = true;
+    // this.store.isLogin = true;
   }
 
   showSignUp(): void {
     this.loginStatus = loginState.SignUp;
-    this.store.isLogin = true;
+    // this.store.isLogin = true;
   }
   
   showWOLogin(): void {
     this.loginStatus = loginState.WOLogin;
+    // this.store.isLogin = true;
+  }
+
+  logIn() {
     this.store.isLogin = true;
+
   }
 
   ngOnInit() {
